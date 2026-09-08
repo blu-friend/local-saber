@@ -7,15 +7,15 @@
 ### Local File Storage
 
 All your notes are stored as files on your device in a standard folder location:
-- **Linux**: `~/.local/share/com.adilhanney.saber/` (or your custom folder)
-- **Windows**: `%APPDATA%\Saber\` (or your custom folder)
-- **macOS**: `~/Library/Application Support/com.adilhanney.saber/` (or your custom folder)
+- **Linux**: `~/.local/share/Local Saber/` (or your custom folder)
+- **Windows**: `%APPDATA%\Local Saber\` (or your custom folder)
+- **macOS**: `~/Library/Application Support/Local Saber/` (or your custom folder)
 
 You can browse, backup, and manage your notes using your file manager just like any other files.
 
 ### Syncing Between Devices
 
-If you want to sync your notes across multiple devices, we recommend **[Syncthing](https://syncthing.net/)**, a free and open-source file synchronization application. Simply sync the Saber folder on each device using Syncthing, and your notes will stay in perfect sync.
+If you want to sync your notes across multiple devices, we recommend **[Syncthing](https://syncthing.net/)**, a free and open-source file synchronization application. Simply sync the Local Saber folder on each device using Syncthing, and your notes will stay in perfect sync.
 
 ### Original Repository
 
@@ -48,15 +48,15 @@ Discover a whole new way to capture and organize your thoughts with Saber. Wheth
 ### Local File Storage
 
 All your notes are stored as files on your device in a standard folder location:
-- **Linux**: `~/.local/share/com.adilhanney.saber/` (or your custom folder)
-- **Windows**: `%APPDATA%\Saber\` (or your custom folder)
-- **macOS**: `~/Library/Application Support/com.adilhanney.saber/` (or your custom folder)
+- **Linux**: `~/.local/share/Local Saber/` (or your custom folder)
+- **Windows**: `%APPDATA%\Local Saber\` (or your custom folder)
+- **macOS**: `~/Library/Application Support/Local Saber/` (or your custom folder)
 
 You can browse, backup, and manage your notes using your file manager just like any other files.
 
 ### Syncing Between Devices
 
-If you want to sync your notes across multiple devices, we recommend **[Syncthing](https://syncthing.net/)**, a free and open-source file synchronization application. Simply sync the Saber folder on each device using Syncthing, and your notes will stay in perfect sync.
+If you want to sync your notes across multiple devices, we recommend **[Syncthing](https://syncthing.net/)**, a free and open-source file synchronization application. Simply sync the Local Saber folder on each device using Syncthing, and your notes will stay in perfect sync.
 
 ### Original Repository
 

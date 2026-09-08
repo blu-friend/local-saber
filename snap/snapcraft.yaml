@@ -1,4 +1,4 @@
-name: saber
+name: local-saber
 base: core24
 adopt-info: saber
 grade: stable
@@ -56,7 +56,7 @@ apps:
     command: saber
     desktop: meta/gui/saber.desktop
     extensions: [gnome]
-    common-id: com.adilhanney.saber
+    common-id: com.localsaber.app
     plugs:
       - home
       - network
