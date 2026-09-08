@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:saber/components/theming/adaptive_circular_progress_indicator.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/theming/adaptive_circular_progress_indicator.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class ExportBar extends StatefulWidget {
   const new({

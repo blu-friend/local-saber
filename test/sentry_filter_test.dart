@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/flavor_config.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/sentry/sentry_filter.dart';
-import 'package:saber/data/sentry/sentry_init.dart';
+import 'package:local_saber/data/flavor_config.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/sentry/sentry_filter.dart';
+import 'package:local_saber/data/sentry/sentry_init.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 void main() {

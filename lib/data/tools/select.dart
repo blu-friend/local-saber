@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:saber/components/canvas/_stroke.dart';
-import 'package:saber/components/canvas/image/editor_image.dart';
-import 'package:saber/data/tools/_tool.dart';
+import 'package:local_saber/components/canvas/_stroke.dart';
+import 'package:local_saber/components/canvas/image/editor_image.dart';
+import 'package:local_saber/data/tools/_tool.dart';
 import 'package:sbn/tool_id.dart';
 
 class Select extends Tool {

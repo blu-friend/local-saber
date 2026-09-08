@@ -1,4 +1,4 @@
-# <img src="https://github.com/saber-notes/saber/raw/main/assets/icon/icon.png" width="30" height="30" alt="Logo"> Local Saber
+# Local Saber
 
 ## About This Fork
 
@@ -7,6 +7,7 @@
 ### Local File Storage
 
 All your notes are stored as files on your device in a standard folder location:
+
 - **Linux**: `~/.local/share/Local Saber/` (or your custom folder)
 - **Windows**: `%APPDATA%\Local Saber\` (or your custom folder)
 - **macOS**: `~/Library/Application Support/Local Saber/` (or your custom folder)
@@ -40,24 +41,3 @@ Saber's highlighter has no such issues. It utilizes canvas compositing to render
 Saber has everything you need to keep your notes organized. Create folders inside folders inside folders to your heart's content with no limit on the number of nested folders. And even though a note may be buried deep within a nested folder, you can still access it easily with your most recent notes always available on the home screen.
 
 Discover a whole new way to capture and organize your thoughts with Saber. Whether you're a student, professional, or creative mind, Saber is your trusted companion for digital handwriting. Download now and let your ideas flow freely!
-
-## About This Fork
-
-**This is a fork of [Saber](https://github.com/saber-notes/saber)** that removes the Nextcloud server dependency and instead saves all notes locally in a folder on your device that you can access directly through your file manager. This gives you complete control over your data without requiring cloud infrastructure.
-
-### Local File Storage
-
-All your notes are stored as files on your device in a standard folder location:
-- **Linux**: `~/.local/share/Local Saber/` (or your custom folder)
-- **Windows**: `%APPDATA%\Local Saber\` (or your custom folder)
-- **macOS**: `~/Library/Application Support/Local Saber/` (or your custom folder)
-
-You can browse, backup, and manage your notes using your file manager just like any other files.
-
-### Syncing Between Devices
-
-If you want to sync your notes across multiple devices, we recommend **[Syncthing](https://syncthing.net/)**, a free and open-source file synchronization application. Simply sync the Local Saber folder on each device using Syncthing, and your notes will stay in perfect sync.
-
-### Original Repository
-
-For the official version of Saber with Nextcloud integration, visit the [original repository](https://github.com/saber-notes/saber).

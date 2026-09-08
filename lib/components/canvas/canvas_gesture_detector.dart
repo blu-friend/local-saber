@@ -7,13 +7,13 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:keybinder/keybinder.dart';
-import 'package:saber/components/canvas/hud/canvas_hud.dart';
-import 'package:saber/components/canvas/interactive_canvas.dart';
-import 'package:saber/data/editor/page.dart';
-import 'package:saber/data/extensions/change_notifier_extensions.dart';
-import 'package:saber/data/extensions/matrix4_extensions.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/pages/editor/editor.dart';
+import 'package:local_saber/components/canvas/hud/canvas_hud.dart';
+import 'package:local_saber/components/canvas/interactive_canvas.dart';
+import 'package:local_saber/data/editor/page.dart';
+import 'package:local_saber/data/extensions/change_notifier_extensions.dart';
+import 'package:local_saber/data/extensions/matrix4_extensions.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/pages/editor/editor.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 class CanvasGestureDetector extends StatefulWidget {

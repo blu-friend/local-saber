@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
-import 'package:saber/components/canvas/canvas_gesture_detector.dart';
-import 'package:saber/components/canvas/canvas_preview.dart';
-import 'package:saber/components/theming/adaptive_icon.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/data/editor/editor_core_info.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/canvas/canvas_gesture_detector.dart';
+import 'package:local_saber/components/canvas/canvas_preview.dart';
+import 'package:local_saber/components/theming/adaptive_icon.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/data/editor/editor_core_info.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class EditorPageManager extends StatefulWidget {
   const new({

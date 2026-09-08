@@ -4,10 +4,10 @@ library;
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/components/settings/update_manager.dart';
-import 'package:saber/data/locales.dart';
-import 'package:saber/data/saber_version.dart';
-import 'package:saber/data/version.dart';
+import 'package:local_saber/components/settings/update_manager.dart';
+import 'package:local_saber/data/locales.dart';
+import 'package:local_saber/data/saber_version.dart';
+import 'package:local_saber/data/version.dart';
 
 const dummyChangelog = 'Release_notes_will_be_added_here';
 

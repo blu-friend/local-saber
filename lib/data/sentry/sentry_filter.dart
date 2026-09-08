@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:saber/data/prefs.dart';
+import 'package:local_saber/data/prefs.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 abstract class SentryFilter {

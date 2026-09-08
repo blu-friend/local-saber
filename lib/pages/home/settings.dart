@@ -6,30 +6,29 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:saber/components/navbar/responsive_navbar.dart';
-import 'package:saber/components/settings/app_info.dart';
-import 'package:saber/components/settings/settings_button.dart';
-import 'package:saber/components/settings/settings_color.dart';
-import 'package:saber/components/settings/settings_directory_selector.dart';
-import 'package:saber/components/settings/settings_dropdown.dart';
-import 'package:saber/components/settings/settings_selection.dart';
-import 'package:saber/components/settings/settings_sentry.dart';
-import 'package:saber/components/settings/settings_subtitle.dart';
-import 'package:saber/components/settings/settings_switch.dart';
-import 'package:saber/components/settings/update_manager.dart';
-import 'package:saber/components/theming/adaptive_alert_dialog.dart';
-import 'package:saber/components/theming/adaptive_toggle_buttons.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/components/theming/uni_icon.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/flavor_config.dart';
-import 'package:saber/data/is_this_a_test.dart';
-import 'package:saber/data/locales.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/routes.dart';
-import 'package:saber/data/sentry/sentry_init.dart';
-import 'package:saber/data/tools/shape_pen.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/navbar/responsive_navbar.dart';
+import 'package:local_saber/components/settings/app_info.dart';
+import 'package:local_saber/components/settings/settings_button.dart';
+import 'package:local_saber/components/settings/settings_color.dart';
+import 'package:local_saber/components/settings/settings_directory_selector.dart';
+import 'package:local_saber/components/settings/settings_dropdown.dart';
+import 'package:local_saber/components/settings/settings_selection.dart';
+import 'package:local_saber/components/settings/settings_sentry.dart';
+import 'package:local_saber/components/settings/settings_subtitle.dart';
+import 'package:local_saber/components/settings/settings_switch.dart';
+import 'package:local_saber/components/settings/update_manager.dart';
+import 'package:local_saber/components/theming/adaptive_alert_dialog.dart';
+import 'package:local_saber/components/theming/adaptive_toggle_buttons.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/components/theming/uni_icon.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/is_this_a_test.dart';
+import 'package:local_saber/data/locales.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/routes.dart';
+import 'package:local_saber/data/sentry/sentry_init.dart';
+import 'package:local_saber/data/tools/shape_pen.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:stow/stow.dart';
 
 class const SettingsPage({super.key}) extends StatefulWidget {
@@ -141,8 +140,6 @@ class _SettingsPageState extends State<SettingsPage> {
     final colorScheme = ColorScheme.of(context);
     platform = Theme.of(context).platform;
     final cupertino = platform.isCupertino;
-
-    final requiresManualUpdates = FlavorConfig.appStore.isEmpty;
 
     final materialIcon = switch (defaultTargetPlatform) {
       .windows => FontAwesomeIcons.windows,

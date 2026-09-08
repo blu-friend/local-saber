@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/components/theming/adaptive_alert_dialog.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/i18n/strings.g.dart';
-import 'package:saber/pages/editor/editor.dart';
+import 'package:local_saber/components/theming/adaptive_alert_dialog.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/i18n/strings.g.dart';
+import 'package:local_saber/pages/editor/editor.dart';
 
 class DeleteNoteButton extends StatelessWidget {
   const new({

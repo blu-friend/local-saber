@@ -1,15 +1,14 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/components/canvas/canvas_background_preview.dart';
-import 'package:saber/components/canvas/canvas_image_dialog.dart';
-import 'package:saber/components/canvas/inner_canvas.dart';
-import 'package:saber/data/editor/editor_core_info.dart';
-import 'package:saber/data/editor/page.dart';
-import 'package:saber/data/extensions/list_extensions.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/i18n/extensions/box_fit_localized.dart';
-import 'package:saber/i18n/extensions/canvas_background_pattern_localized.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/canvas/canvas_background_preview.dart';
+import 'package:local_saber/components/canvas/canvas_image_dialog.dart';
+import 'package:local_saber/components/canvas/inner_canvas.dart';
+import 'package:local_saber/data/editor/editor_core_info.dart';
+import 'package:local_saber/data/editor/page.dart';
+import 'package:local_saber/data/extensions/list_extensions.dart';
+import 'package:local_saber/i18n/extensions/box_fit_localized.dart';
+import 'package:local_saber/i18n/extensions/canvas_background_pattern_localized.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:sbn/canvas_background_pattern.dart';
 
 class EditorBottomSheet extends StatefulWidget {
@@ -317,25 +316,6 @@ class _EditorBottomSheetState extends State<EditorBottomSheet> {
               ],
             ),
             const SizedBox(height: 16),
-            // TODO: Sync disabled - watch server feature removed
-            // if (stows.loggedIn) ...[
-            //   StatefulBuilder(
-            //     builder: (context, setState) {
-            //       final isWatchingServer = widget.getIsWatchingServer();
-            //       return CheckboxListTile.adaptive(
-            //         value: isWatchingServer,
-            //         title: Text(t.editor.menu.watchServer),
-            //         subtitle: isWatchingServer
-            //             ? Text(t.editor.menu.watchServerReadOnly)
-            //             : null,
-            //         onChanged: (value) => setState(() {
-            //           widget.setIsWatchingServer(value!);
-            //         }),
-            //       );
-            //     },
-            //   ),
-            //   const SizedBox(height: 16),
-            // ],
           ],
         ),
       ),

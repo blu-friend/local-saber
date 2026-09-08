@@ -1,6 +1,6 @@
 import 'package:collapsible/collapsible.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:sbn/read_only_reason.dart';
 
 /// A banner that tells the user why the note is read-only.

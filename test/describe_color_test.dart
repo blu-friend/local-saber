@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/components/toolbar/color_bar.dart';
+import 'package:local_saber/components/toolbar/color_bar.dart';
 
 void main() {
   group('describeColor', () {

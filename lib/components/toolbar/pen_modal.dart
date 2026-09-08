@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:saber/components/toolbar/size_picker.dart';
-import 'package:saber/data/extensions/axis_extensions.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/tools/_tool.dart';
-import 'package:saber/data/tools/highlighter.dart';
-import 'package:saber/data/tools/pen.dart';
-import 'package:saber/data/tools/pencil.dart';
-import 'package:saber/data/tools/shape_pen.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/toolbar/size_picker.dart';
+import 'package:local_saber/data/extensions/axis_extensions.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/tools/_tool.dart';
+import 'package:local_saber/data/tools/highlighter.dart';
+import 'package:local_saber/data/tools/pen.dart';
+import 'package:local_saber/data/tools/pencil.dart';
+import 'package:local_saber/data/tools/shape_pen.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class PenModal extends StatefulWidget {
   const new({super.key, required this.getTool, required this.setTool});

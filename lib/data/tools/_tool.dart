@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:saber/data/prefs.dart';
+import 'package:local_saber/data/prefs.dart';
 import 'package:sbn/tool_id.dart';
 
 abstract class Tool {

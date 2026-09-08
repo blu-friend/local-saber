@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/components/theming/adaptive_icon.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/theming/adaptive_icon.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class SelectionBar extends StatelessWidget {
   final VoidCallback duplicateSelection;

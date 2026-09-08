@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/i18n/extensions/canvas_background_pattern_localized.dart';
+import 'package:local_saber/i18n/extensions/canvas_background_pattern_localized.dart';
 import 'package:sbn/canvas_background_pattern.dart';
 
 void main() {

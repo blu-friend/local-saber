@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_screenshot/golden_screenshot.dart';
-import 'package:saber/components/home/syncing_button.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/flavor_config.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/sentry/_sentry_init_foss.dart';
-import 'package:saber/i18n/strings.g.dart';
-import 'package:saber/pages/home/home.dart';
+import 'package:local_saber/components/home/syncing_button.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/flavor_config.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/sentry/_sentry_init_foss.dart';
+import 'package:local_saber/i18n/strings.g.dart';
+import 'package:local_saber/pages/home/home.dart';
 
 import 'screenshot_goldens_test.dart';
 import 'utils/test_mock_channel_handlers.dart';

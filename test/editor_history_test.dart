@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/editor/editor_history.dart';
+import 'package:local_saber/data/editor/editor_history.dart';
 
 void main() {
   test('Test editor history', () {

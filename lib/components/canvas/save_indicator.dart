@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:saber/components/theming/adaptive_circular_progress_indicator.dart';
-import 'package:saber/data/is_this_a_test.dart';
-import 'package:saber/data/routes.dart';
+import 'package:local_saber/components/theming/adaptive_circular_progress_indicator.dart';
+import 'package:local_saber/data/is_this_a_test.dart';
+import 'package:local_saber/data/routes.dart';
 
 /// Replaces the back button as the
 /// [AppBar.leading] widget in the [AppBar]

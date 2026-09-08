@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/components/settings/update_manager.dart';
-import 'package:saber/data/flavor_config.dart';
+import 'package:local_saber/components/settings/update_manager.dart';
+import 'package:local_saber/data/flavor_config.dart';
 
 void main() {
   group('getLatestDownloadUrl', () {

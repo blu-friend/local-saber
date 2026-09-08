@@ -3,11 +3,11 @@ import 'dart:io';
 
 import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:http/http.dart' as http;
+import 'package:local_saber/data/nextcloud/nc_http_overrides.dart';
+import 'package:local_saber/data/nextcloud/nextcloud_client_extension.dart';
 import 'package:logging/logging.dart';
 import 'package:nextcloud/core.dart';
 import 'package:nextcloud/nextcloud.dart';
-import 'package:saber/data/nextcloud/nc_http_overrides.dart';
-import 'package:saber/data/nextcloud/nextcloud_client_extension.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SaberLoginFlow {

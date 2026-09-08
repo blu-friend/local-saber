@@ -5,12 +5,12 @@ import 'package:background_downloader/background_downloader.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:local_saber/components/settings/update_dialog.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/saber_version.dart';
+import 'package:local_saber/data/version.dart' as version;
 import 'package:logging/logging.dart';
 import 'package:open_file/open_file.dart';
-import 'package:saber/components/settings/update_dialog.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/saber_version.dart';
-import 'package:saber/data/version.dart' as version;
 
 abstract class UpdateManager {
   static final log = Logger('UpdateManager');

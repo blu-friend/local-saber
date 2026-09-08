@@ -1,16 +1,16 @@
 import 'package:defer_pointer/defer_pointer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quill/flutter_quill.dart';
+import 'package:local_saber/components/canvas/_canvas_background_painter.dart';
+import 'package:local_saber/components/canvas/_canvas_painter.dart';
+import 'package:local_saber/components/canvas/_stroke.dart';
+import 'package:local_saber/components/canvas/canvas_image.dart';
+import 'package:local_saber/components/canvas/image/editor_image.dart';
+import 'package:local_saber/data/editor/editor_core_info.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/tools/select.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:one_dollar_unistroke_recognizer/one_dollar_unistroke_recognizer.dart';
-import 'package:saber/components/canvas/_canvas_background_painter.dart';
-import 'package:saber/components/canvas/_canvas_painter.dart';
-import 'package:saber/components/canvas/_stroke.dart';
-import 'package:saber/components/canvas/canvas_image.dart';
-import 'package:saber/components/canvas/image/editor_image.dart';
-import 'package:saber/data/editor/editor_core_info.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/tools/select.dart';
-import 'package:saber/i18n/strings.g.dart';
 import 'package:sbn/canvas_background_pattern.dart';
 import 'package:sbn/quill_styles.dart';
 

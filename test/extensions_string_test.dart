@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/extensions/string_extensions.dart';
+import 'package:local_saber/data/extensions/string_extensions.dart';
 
 void main() {
   test('String.replaceAllMappedAsync', () async {

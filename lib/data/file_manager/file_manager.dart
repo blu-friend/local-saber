@@ -8,14 +8,14 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart' show DateFormat;
+import 'package:local_saber/components/home/sort_button.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/i18n/strings.g.dart';
+import 'package:local_saber/pages/editor/editor.dart';
 import 'package:logging/logging.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:saber/components/home/sort_button.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/i18n/strings.g.dart';
-import 'package:saber/pages/editor/editor.dart';
 import 'package:saver_gallery/saver_gallery.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -263,8 +263,6 @@ class FileManager {
 
     void afterWrite() {
       broadcastFileWrite(FileOperationType.write, filePath);
-      // TODO: Sync disabled - remove this when sync is removed
-      // if (alsoUpload) syncer.uploader.enqueueRel(filePath);
       if (filePath.endsWith(Editor.extension)) {
         _removeReferences(
           '${filePath.substring(0, filePath.length - Editor.extension.length)}'
@@ -403,10 +401,6 @@ class FileManager {
       log.warning('Tried to move non-existent file from $fromPath to $toPath');
     }
 
-    // TODO: Sync disabled - remove this when sync is removed
-    // syncer.uploader.enqueueRel(fromPath);
-    // syncer.uploader.enqueueRel(toPath);
-
     _renameReferences(fromPath, toPath);
     broadcastFileWrite(FileOperationType.delete, fromPath);
     broadcastFileWrite(FileOperationType.write, toPath);
@@ -452,9 +446,6 @@ class FileManager {
     final file = getFile(filePath);
     if (!file.existsSync()) return;
     await file.delete();
-
-    // TODO: Sync disabled - remove this when sync is removed
-    // if (alsoUpload) syncer.uploader.enqueueRel(filePath);
 
     _removeReferences(filePath);
     broadcastFileWrite(FileOperationType.delete, filePath);

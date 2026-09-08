@@ -1,4 +1,4 @@
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:sbn/canvas_background_pattern.dart';
 
 extension CanvasBackgroundPatternLocalized on CanvasBackgroundPattern {

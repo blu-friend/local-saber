@@ -7,8 +7,8 @@ import 'dart:io';
 import 'package:args/args.dart';
 import 'package:collection/collection.dart';
 import 'package:intl/intl.dart';
-import 'package:saber/data/saber_version.dart';
-import 'package:saber/data/version.dart' as old_version_file;
+import 'package:local_saber/data/saber_version.dart';
+import 'package:local_saber/data/version.dart' as old_version_file;
 
 final oldVersion = SaberVersion.fromName(old_version_file.buildName);
 late final SaberVersion newVersion;

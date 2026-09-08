@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:saber/data/prefs.dart';
+import 'package:local_saber/data/prefs.dart';
 
 /// Whether the Sentry SDK is available for use.
 /// Also see [isSentryEnabled].

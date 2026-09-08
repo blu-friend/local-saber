@@ -3,10 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:golden_screenshot/golden_screenshot.dart';
-import 'package:saber/components/navbar/horizontal_navbar.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/components/theming/uni_icon.dart';
-import 'package:saber/data/flavor_config.dart';
+import 'package:local_saber/components/navbar/horizontal_navbar.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/components/theming/uni_icon.dart';
+import 'package:local_saber/data/flavor_config.dart';
 
 void main() {
   testGoldens('GlassyContainer', (tester) async {

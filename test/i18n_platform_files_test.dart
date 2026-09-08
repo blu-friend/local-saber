@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 void main() {
   group('Locales listed in platform files', () {

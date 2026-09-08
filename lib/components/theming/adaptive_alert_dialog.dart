@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/components/theming/saber_theme.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
 
 class AdaptiveAlertDialog extends StatelessWidget {
   const new({

@@ -4,13 +4,13 @@ import 'dart:typed_data';
 import 'package:flutter/cupertino.dart' show CupertinoIcons;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:saber/components/canvas/image/editor_image.dart';
-import 'package:saber/components/theming/adaptive_icon.dart';
-import 'package:saber/components/theming/adaptive_switch.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/canvas/image/editor_image.dart';
+import 'package:local_saber/components/theming/adaptive_icon.dart';
+import 'package:local_saber/components/theming/adaptive_switch.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class CanvasImageDialog extends StatefulWidget {
   const new({

@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:saber/components/canvas/_stroke.dart';
+import 'package:local_saber/components/canvas/_stroke.dart';
 
-import 'package:saber/data/tools/_tool.dart';
+import 'package:local_saber/data/tools/_tool.dart';
 import 'package:sbn/tool_id.dart';
 
 double square(double x) => x * x;

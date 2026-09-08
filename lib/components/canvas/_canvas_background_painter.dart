@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/data/extensions/color_extensions.dart';
+import 'package:local_saber/data/extensions/color_extensions.dart';
 import 'package:sbn/canvas_background_pattern.dart';
 
 class CanvasBackgroundPainter extends CustomPainter {

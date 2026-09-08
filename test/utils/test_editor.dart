@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/tools/pen.dart';
-import 'package:saber/pages/editor/editor.dart';
+import 'package:local_saber/data/tools/pen.dart';
+import 'package:local_saber/pages/editor/editor.dart';
 
 extension TestEditor on EditorState {
   /// Does the bare minimum to get a stroke in the editor.

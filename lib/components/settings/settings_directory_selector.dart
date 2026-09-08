@@ -6,10 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:saber/components/theming/adaptive_alert_dialog.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/theming/adaptive_alert_dialog.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:sbn/font_fallbacks.dart';
 
 class SettingsDirectorySelector extends StatelessWidget {
@@ -143,9 +143,7 @@ class _DirectorySelectorState extends State<DirectorySelector> {
     final colorScheme = ColorScheme.of(context);
 
     final emptyError = widget.mustBeEmpty && !_isEmpty;
-    // TODO: Sync disabled - this check is no longer needed
-    final syncingError = false;
-    final anyErrors = emptyError || syncingError;
+    final anyErrors = emptyError;
 
     return AdaptiveAlertDialog(
       title: Text(widget.title),
@@ -179,11 +177,6 @@ class _DirectorySelectorState extends State<DirectorySelector> {
           if (emptyError)
             Text(
               t.settings.customDataDir.mustBeEmpty,
-              style: TextStyle(color: colorScheme.error),
-            ),
-          if (syncingError)
-            Text(
-              t.settings.customDataDir.mustBeDoneSyncing,
               style: TextStyle(color: colorScheme.error),
             ),
         ],

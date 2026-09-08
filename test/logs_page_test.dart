@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_screenshot/golden_screenshot.dart';
+import 'package:local_saber/pages/logs.dart';
 import 'package:logging/logging.dart';
-import 'package:saber/pages/logs.dart';
 
 void main() {
   group('LogsPage', () {

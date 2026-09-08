@@ -11,43 +11,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_quill/flutter_quill.dart' as flutter_quill;
 import 'package:keybinder/keybinder.dart';
+import 'package:local_saber/components/canvas/_asset_cache.dart';
+import 'package:local_saber/components/canvas/_stroke.dart';
+import 'package:local_saber/components/canvas/canvas.dart';
+import 'package:local_saber/components/canvas/canvas_gesture_detector.dart';
+import 'package:local_saber/components/canvas/canvas_image.dart';
+import 'package:local_saber/components/canvas/image/editor_image.dart';
+import 'package:local_saber/components/canvas/save_indicator.dart';
+import 'package:local_saber/components/editor/read_only_banner.dart';
+import 'package:local_saber/components/theming/adaptive_alert_dialog.dart';
+import 'package:local_saber/components/theming/adaptive_icon.dart';
+import 'package:local_saber/components/theming/dynamic_material_app.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/components/toolbar/color_bar.dart';
+import 'package:local_saber/components/toolbar/editor_bottom_sheet.dart';
+import 'package:local_saber/components/toolbar/editor_page_manager.dart';
+import 'package:local_saber/components/toolbar/toolbar.dart';
+import 'package:local_saber/data/editor/editor_core_info.dart';
+import 'package:local_saber/data/editor/editor_exporter.dart';
+import 'package:local_saber/data/editor/editor_history.dart';
+import 'package:local_saber/data/editor/page.dart';
+import 'package:local_saber/data/extensions/change_notifier_extensions.dart';
+import 'package:local_saber/data/extensions/matrix4_extensions.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/tools/_tool.dart';
+import 'package:local_saber/data/tools/eraser.dart';
+import 'package:local_saber/data/tools/highlighter.dart';
+import 'package:local_saber/data/tools/laser_pointer.dart';
+import 'package:local_saber/data/tools/pen.dart';
+import 'package:local_saber/data/tools/pencil.dart';
+import 'package:local_saber/data/tools/select.dart';
+import 'package:local_saber/data/tools/shape_pen.dart';
+import 'package:local_saber/i18n/strings.g.dart';
+import 'package:local_saber/pages/home/whiteboard.dart';
 import 'package:logging/logging.dart';
 import 'package:path/path.dart' as p;
 import 'package:pdfrx/pdfrx.dart';
-import 'package:saber/components/canvas/_asset_cache.dart';
-import 'package:saber/components/canvas/_stroke.dart';
-import 'package:saber/components/canvas/canvas.dart';
-import 'package:saber/components/canvas/canvas_gesture_detector.dart';
-import 'package:saber/components/canvas/canvas_image.dart';
-import 'package:saber/components/canvas/image/editor_image.dart';
-import 'package:saber/components/canvas/save_indicator.dart';
-import 'package:saber/components/editor/read_only_banner.dart';
-import 'package:saber/components/theming/adaptive_alert_dialog.dart';
-import 'package:saber/components/theming/adaptive_icon.dart';
-import 'package:saber/components/theming/dynamic_material_app.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/components/toolbar/color_bar.dart';
-import 'package:saber/components/toolbar/editor_bottom_sheet.dart';
-import 'package:saber/components/toolbar/editor_page_manager.dart';
-import 'package:saber/components/toolbar/toolbar.dart';
-import 'package:saber/data/editor/editor_core_info.dart';
-import 'package:saber/data/editor/editor_exporter.dart';
-import 'package:saber/data/editor/editor_history.dart';
-import 'package:saber/data/editor/page.dart';
-import 'package:saber/data/extensions/change_notifier_extensions.dart';
-import 'package:saber/data/extensions/matrix4_extensions.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/tools/_tool.dart';
-import 'package:saber/data/tools/eraser.dart';
-import 'package:saber/data/tools/highlighter.dart';
-import 'package:saber/data/tools/laser_pointer.dart';
-import 'package:saber/data/tools/pen.dart';
-import 'package:saber/data/tools/pencil.dart';
-import 'package:saber/data/tools/select.dart';
-import 'package:saber/data/tools/shape_pen.dart';
-import 'package:saber/i18n/strings.g.dart';
-import 'package:saber/pages/home/whiteboard.dart';
+
 import 'package:sbn/change.dart';
 import 'package:super_clipboard/super_clipboard.dart';
 
@@ -851,32 +852,6 @@ class EditorState extends State<Editor> {
 
     final relativeFilePath = coreInfo.filePath;
     assert(relativeFilePath.isNotEmpty, 'Cannot refresh unnamed file');
-    
-    // TODO: Sync disabled - this function should be updated or removed
-    // final syncFile = await SaberSyncFile.relative(
-    //   relativeFilePath + Editor.extension,
-    // );
-    //
-    // final bestFile = await SaberSyncInterface.getBestFile(
-    //   syncFile,
-    //   onLocalFileNotFound: .local,
-    //   onEqualFiles: .local,
-    //   preferCache: false,
-    // );
-    // if (bestFile != .remote) return;
-    //
-    // late final StreamSubscription<SaberSyncFile> subscription;
-    // void listener(SaberSyncFile transferred) {
-    //   if (transferred != syncFile) return;
-    //   subscription.cancel();
-    //   _loadCoreInfo(relativeFilePath)
-    //       .then((_) => coreInfo.readOnlyReason = .watchingServer);
-    // }
-    //
-    // subscription = syncer.downloader.transferStream.listen(listener);
-    //
-    // await syncer.downloader.enqueue(syncFile: syncFile);
-    // syncer.downloader.bringToFront(syncFile);
   }
 
   void autosaveAfterDelay() {

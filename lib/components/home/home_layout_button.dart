@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:material_symbols_icons/symbols.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/i18n/strings.g.dart';
 import 'package:stow_codecs/stow_codecs.dart';
 
 class const HomeLayoutButton({super.key}) extends HookWidget {

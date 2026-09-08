@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/codecs/base64_codec.dart';
+import 'package:local_saber/data/codecs/base64_codec.dart';
 
 void main() {
   group('Base64StowCodec', () {

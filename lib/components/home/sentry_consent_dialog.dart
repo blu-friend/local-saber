@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/components/settings/app_info.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/sentry/sentry_init.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/components/settings/app_info.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/sentry/sentry_init.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class const SentryConsentDialog({super.key}) extends StatelessWidget {

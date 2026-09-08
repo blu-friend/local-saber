@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
+import 'package:local_saber/data/nextcloud/readable_bytes.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:nextcloud/provisioning_api.dart' show UserDetailsQuota;
-import 'package:saber/data/nextcloud/readable_bytes.dart';
-import 'package:saber/i18n/strings.g.dart';
 import 'package:stow_codecs/stow_codecs.dart';
 
 typedef QuotaRaw = UserDetailsQuota;

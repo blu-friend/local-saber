@@ -4,23 +4,23 @@ import 'package:collapsible/collapsible.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
+import 'package:local_saber/components/home/delete_note_button.dart';
+import 'package:local_saber/components/home/export_note_button.dart';
+import 'package:local_saber/components/home/grid_folders.dart';
+import 'package:local_saber/components/home/home_layout_button.dart';
+import 'package:local_saber/components/home/masonry_files.dart';
+import 'package:local_saber/components/home/move_note_button.dart';
+import 'package:local_saber/components/home/new_note_button.dart';
+import 'package:local_saber/components/home/no_files.dart';
+import 'package:local_saber/components/home/path_components.dart';
+import 'package:local_saber/components/home/rename_note_button.dart';
+import 'package:local_saber/components/home/sort_button.dart';
+import 'package:local_saber/components/theming/saber_theme.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/routes.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:path/path.dart' as p;
-import 'package:saber/components/home/delete_note_button.dart';
-import 'package:saber/components/home/export_note_button.dart';
-import 'package:saber/components/home/grid_folders.dart';
-import 'package:saber/components/home/home_layout_button.dart';
-import 'package:saber/components/home/masonry_files.dart';
-import 'package:saber/components/home/move_note_button.dart';
-import 'package:saber/components/home/new_note_button.dart';
-import 'package:saber/components/home/no_files.dart';
-import 'package:saber/components/home/path_components.dart';
-import 'package:saber/components/home/rename_note_button.dart';
-import 'package:saber/components/home/sort_button.dart';
-import 'package:saber/components/theming/saber_theme.dart';
-import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/routes.dart';
-import 'package:saber/i18n/strings.g.dart';
 
 class BrowsePage extends StatefulHookWidget {
   const new({super.key, String? path}) : initialPath = path;
@@ -143,10 +143,7 @@ class _BrowsePageState extends State<BrowsePage> {
                 bottom: 8, // less than other pages for path components
               ),
             ),
-            actions: const [
-              BrowseSortButton(),
-              HomeLayoutButton(),
-            ],
+            actions: const [BrowseSortButton(), HomeLayoutButton()],
           ),
           SliverToBoxAdapter(
             child: PathComponents(path, onPathComponentTap: onPathComponentTap),

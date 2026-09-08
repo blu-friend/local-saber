@@ -6,8 +6,8 @@
 
 import 'dart:io';
 
-import 'package:saber/data/locales.dart';
-import 'package:saber/data/version.dart';
+import 'package:local_saber/data/locales.dart';
+import 'package:local_saber/data/version.dart';
 
 import 'src/fix_spelling.dart';
 import 'src/lms_translator.dart';

@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:local_saber/data/prefs.dart';
 import 'package:logging/logging.dart';
-import 'package:saber/data/prefs.dart';
 
 class NcHttpOverrides extends HttpOverrides {
   static String? temporarilyExemptHost;

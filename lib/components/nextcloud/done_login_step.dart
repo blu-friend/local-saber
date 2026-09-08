@@ -2,13 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:local_saber/components/misc/faq.dart';
+import 'package:local_saber/data/extensions/string_extensions.dart';
+import 'package:local_saber/data/nextcloud/nextcloud_client_extension.dart';
+import 'package:local_saber/data/prefs.dart';
+import 'package:local_saber/data/quota.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 import 'package:logging/logging.dart';
-import 'package:saber/components/misc/faq.dart';
-import 'package:saber/data/extensions/string_extensions.dart';
-import 'package:saber/data/nextcloud/nextcloud_client_extension.dart';
-import 'package:saber/data/prefs.dart';
-import 'package:saber/data/quota.dart';
-import 'package:saber/i18n/strings.g.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DoneLoginStep extends StatelessWidget {

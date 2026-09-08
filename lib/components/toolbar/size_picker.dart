@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:saber/data/tools/pen.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/data/tools/pen.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class SizePicker extends StatefulWidget {
   const new({super.key, required this.axis, required this.pen});

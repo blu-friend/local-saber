@@ -25,5 +25,13 @@
     "explorer.fileNesting.patterns": {
         "en.i18n.yaml": "*.i18n.yaml",
         "strings_en.g.dart": "strings_*.g.dart"
-    }
+    },
+    "cSpell.words": [
+        "Didnt",
+        "hyperlegible",
+        "keybinder",
+        "prefs",
+        "syncer",
+        "webp"
+    ]
 }

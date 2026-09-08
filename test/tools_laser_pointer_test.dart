@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:saber/data/editor/page.dart';
-import 'package:saber/data/tools/laser_pointer.dart';
-import 'package:saber/data/tools/pen.dart';
+import 'package:local_saber/data/editor/page.dart';
+import 'package:local_saber/data/tools/laser_pointer.dart';
+import 'package:local_saber/data/tools/pen.dart';
 
 void main() {
   group('Laser fade', () {

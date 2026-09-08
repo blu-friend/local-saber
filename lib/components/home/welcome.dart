@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:saber/i18n/strings.g.dart';
+import 'package:local_saber/i18n/strings.g.dart';
 
 class const Welcome({super.key}) extends StatelessWidget {
   @override
