@@ -317,24 +317,25 @@ class _EditorBottomSheetState extends State<EditorBottomSheet> {
               ],
             ),
             const SizedBox(height: 16),
-            if (stows.loggedIn) ...[
-              StatefulBuilder(
-                builder: (context, setState) {
-                  final isWatchingServer = widget.getIsWatchingServer();
-                  return CheckboxListTile.adaptive(
-                    value: isWatchingServer,
-                    title: Text(t.editor.menu.watchServer),
-                    subtitle: isWatchingServer
-                        ? Text(t.editor.menu.watchServerReadOnly)
-                        : null,
-                    onChanged: (value) => setState(() {
-                      widget.setIsWatchingServer(value!);
-                    }),
-                  );
-                },
-              ),
-              const SizedBox(height: 16),
-            ],
+            // TODO: Sync disabled - watch server feature removed
+            // if (stows.loggedIn) ...[
+            //   StatefulBuilder(
+            //     builder: (context, setState) {
+            //       final isWatchingServer = widget.getIsWatchingServer();
+            //       return CheckboxListTile.adaptive(
+            //         value: isWatchingServer,
+            //         title: Text(t.editor.menu.watchServer),
+            //         subtitle: isWatchingServer
+            //             ? Text(t.editor.menu.watchServerReadOnly)
+            //             : null,
+            //         onChanged: (value) => setState(() {
+            //           widget.setIsWatchingServer(value!);
+            //         }),
+            //       );
+            //     },
+            //   ),
+            //   const SizedBox(height: 16),
+            // ],
           ],
         ),
       ),

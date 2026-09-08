@@ -37,7 +37,6 @@ import 'package:saber/data/editor/page.dart';
 import 'package:saber/data/extensions/change_notifier_extensions.dart';
 import 'package:saber/data/extensions/matrix4_extensions.dart';
 import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/nextcloud/saber_syncer.dart';
 import 'package:saber/data/prefs.dart';
 import 'package:saber/data/tools/_tool.dart';
 import 'package:saber/data/tools/eraser.dart';
@@ -852,30 +851,32 @@ class EditorState extends State<Editor> {
 
     final relativeFilePath = coreInfo.filePath;
     assert(relativeFilePath.isNotEmpty, 'Cannot refresh unnamed file');
-    final syncFile = await SaberSyncFile.relative(
-      relativeFilePath + Editor.extension,
-    );
-
-    final bestFile = await SaberSyncInterface.getBestFile(
-      syncFile,
-      onLocalFileNotFound: .local,
-      onEqualFiles: .local,
-      preferCache: false,
-    );
-    if (bestFile != .remote) return;
-
-    late final StreamSubscription<SaberSyncFile> subscription;
-    void listener(SaberSyncFile transferred) {
-      if (transferred != syncFile) return;
-      subscription.cancel();
-      _loadCoreInfo(relativeFilePath)
-          .then((_) => coreInfo.readOnlyReason = .watchingServer);
-    }
-
-    subscription = syncer.downloader.transferStream.listen(listener);
-
-    await syncer.downloader.enqueue(syncFile: syncFile);
-    syncer.downloader.bringToFront(syncFile);
+    
+    // TODO: Sync disabled - this function should be updated or removed
+    // final syncFile = await SaberSyncFile.relative(
+    //   relativeFilePath + Editor.extension,
+    // );
+    //
+    // final bestFile = await SaberSyncInterface.getBestFile(
+    //   syncFile,
+    //   onLocalFileNotFound: .local,
+    //   onEqualFiles: .local,
+    //   preferCache: false,
+    // );
+    // if (bestFile != .remote) return;
+    //
+    // late final StreamSubscription<SaberSyncFile> subscription;
+    // void listener(SaberSyncFile transferred) {
+    //   if (transferred != syncFile) return;
+    //   subscription.cancel();
+    //   _loadCoreInfo(relativeFilePath)
+    //       .then((_) => coreInfo.readOnlyReason = .watchingServer);
+    // }
+    //
+    // subscription = syncer.downloader.transferStream.listen(listener);
+    //
+    // await syncer.downloader.enqueue(syncFile: syncFile);
+    // syncer.downloader.bringToFront(syncFile);
   }
 
   void autosaveAfterDelay() {

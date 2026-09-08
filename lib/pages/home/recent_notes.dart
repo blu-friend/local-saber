@@ -12,7 +12,6 @@ import 'package:saber/components/home/masonry_files.dart';
 import 'package:saber/components/home/move_note_button.dart';
 import 'package:saber/components/home/new_note_button.dart';
 import 'package:saber/components/home/rename_note_button.dart';
-import 'package:saber/components/home/syncing_button.dart';
 import 'package:saber/components/home/welcome.dart';
 import 'package:saber/components/theming/saber_theme.dart';
 import 'package:saber/data/file_manager/file_manager.dart';
@@ -136,7 +135,7 @@ class _RecentPageState extends State<RecentPage> {
                   bottom: 16,
                 ),
               ),
-              actions: const [HomeLayoutButton(), SyncingButton()],
+              actions: const [HomeLayoutButton()],
             ),
           ),
           if (failed) ...[

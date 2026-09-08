@@ -54,27 +54,11 @@ class AdaptiveSwitchListTile extends SwitchListTile {
   }
 
   Widget _buildYaru(BuildContext context, ThemeData theme) {
-    final textTheme = theme.textTheme;
-    final listTileTheme = theme.listTileTheme;
     return YaruSwitchListTile(
       value: value,
       onChanged: onChanged,
-      title: title == null
-          ? null
-          : DefaultTextStyle(
-              style: textTheme.labelLarge!
-                  .merge(listTileTheme.titleTextStyle)
-                  .copyWith(inherit: false),
-              child: title!,
-            ),
-      subtitle: subtitle == null
-          ? null
-          : DefaultTextStyle(
-              style: textTheme.labelMedium!
-                  .merge(listTileTheme.subtitleTextStyle)
-                  .copyWith(inherit: false),
-              child: subtitle!,
-            ),
+      title: title,
+      subtitle: subtitle,
       contentPadding: contentPadding,
       secondary: secondary,
       autofocus: autofocus,

@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:saber/components/theming/adaptive_alert_dialog.dart';
 import 'package:saber/data/file_manager/file_manager.dart';
-import 'package:saber/data/nextcloud/saber_syncer.dart';
 import 'package:saber/data/prefs.dart';
 import 'package:saber/i18n/strings.g.dart';
 import 'package:sbn/font_fallbacks.dart';
@@ -144,9 +143,8 @@ class _DirectorySelectorState extends State<DirectorySelector> {
     final colorScheme = ColorScheme.of(context);
 
     final emptyError = widget.mustBeEmpty && !_isEmpty;
-    final syncingError =
-        widget.mustBeDoneSyncing &&
-        (syncer.uploader.numPending > 0 || syncer.downloader.numPending > 0);
+    // TODO: Sync disabled - this check is no longer needed
+    final syncingError = false;
     final anyErrors = emptyError || syncingError;
 
     return AdaptiveAlertDialog(
