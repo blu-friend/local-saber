@@ -4,10 +4,10 @@
     https://www.freedesktop.org/software/appstream/metainfocreator/#/
 -->
 <component type="desktop-application">
-    <id>com.adilhanney.saber</id>
+    <id>com.localsaber.app</id>
 
-    <name>Saber</name>
-    <summary>The notes app built for handwriting</summary>
+    <name>Local Saber</name>
+    <summary>The notes app built for handwriting (local storage version)</summary>
     <url type="homepage">https://github.com/saber-notes/saber</url>
     <url type="bugtracker">https://github.com/saber-notes/saber/issues</url>
     <url type="donation">https://github.com/sponsors/adil192</url>
@@ -468,7 +468,7 @@
 
     </description>
 
-    <launchable type="desktop-id">com.adilhanney.saber.desktop</launchable>
+    <launchable type="desktop-id">com.localsaber.app.desktop</launchable>
 
     <content_rating type="oars-1.1" />
 

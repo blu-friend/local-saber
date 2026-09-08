@@ -1,4 +1,4 @@
-name: saber
+name: local-saber
 base: core24
 adopt-info: saber
 grade: stable
@@ -10,6 +10,7 @@ platforms:
   amd64:
   arm64:
 
+
 parts:
   saber:
     source: https://github.com/saber-notes/saber.git
@@ -17,17 +18,17 @@ parts:
     source-depth: 1
     plugin: flutter
     build-packages:
-      - clang
-      - execstack
-      - libgtk-3-dev
-      - libjsoncpp-dev
-      - libsecret-1-dev
-      - lld
-      - llvm
-      - openjdk-21-jdk
+    - clang
+    - execstack
+    - libgtk-3-dev
+    - libjsoncpp-dev
+    - libsecret-1-dev
+    - lld
+    - llvm
+    - openjdk-21-jdk
     build-snaps:
-      - cmake
-      - rustup
+    - cmake
+    - rustup
     override-build: |
       ./patches/pre/remove_permission_handler.sh
       ./patches/pre/remove_proprietary_dependencies.sh
@@ -36,15 +37,15 @@ parts:
       mv $CRAFT_PART_SRC/flatpak/com.adilhanney.saber.desktop $CRAFT_PART_INSTALL/meta/gui/saber.desktop
       mkdir $CRAFT_PART_INSTALL/metainfo
       mv $CRAFT_PART_SRC/flatpak/com.adilhanney.saber.metainfo.xml $CRAFT_PART_INSTALL/metainfo/
-    parse-info: [metainfo/com.adilhanney.saber.metainfo.xml]
+    parse-info: [ metainfo/com.adilhanney.saber.metainfo.xml ]
 
   cleanup:
-    after: [saber]
+    after: [ saber ]
     plugin: nil
     build-snaps:
-      - core24
-      - gnome-46-2404
-      - gtk-common-themes
+    - core24
+    - gnome-46-2404
+    - gtk-common-themes
     override-prime: |
       set -eux
       for snap in "core24" "gnome-46-2404" "gtk-common-themes" ; do
@@ -55,9 +56,9 @@ apps:
   saber:
     command: saber
     desktop: meta/gui/saber.desktop
-    extensions: [gnome]
-    common-id: com.adilhanney.saber
+    extensions: [ gnome ]
+    common-id: com.localsaber.app
     plugs:
-      - home
-      - network
-      - network-status
+    - home
+    - network
+    - network-status

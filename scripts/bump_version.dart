@@ -204,7 +204,7 @@ Future<void> updateAllFiles() async {
   }
 
   // update flatpak changelog
-  final metainfoFile = File('flatpak/com.adilhanney.saber.metainfo.xml');
+  final metainfoFile = File('flatpak/com.localsaber.app.metainfo.xml');
   final metainfoLines = await metainfoFile.readAsLines();
   final originalMetainfoLines = metainfoLines.toList();
   if (await metainfoFile.contains(newVersion.buildName)) {
