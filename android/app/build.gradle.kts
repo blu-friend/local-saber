@@ -72,6 +72,7 @@ flutter {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.2.10")
     implementation("com.google.android.material:material:1.14.0")
+    implementation("androidx.documentfile:documentfile:1.0.1")
 }
 
 val abiCodes = mapOf("armeabi-v7a" to 1, "arm64-v8a" to 2, "x86_64" to 3)

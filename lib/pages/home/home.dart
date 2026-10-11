@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:local_saber/components/home/sentry_consent_dialog.dart';
 import 'package:local_saber/components/navbar/responsive_navbar.dart';
 import 'package:local_saber/components/settings/update_manager.dart';
 import 'package:local_saber/components/theming/dynamic_material_app.dart';
+import 'package:local_saber/data/file_manager/file_manager.dart';
+import 'package:local_saber/data/prefs.dart';
 import 'package:local_saber/pages/home/browse.dart';
 import 'package:local_saber/pages/home/recent_notes.dart';
 import 'package:local_saber/pages/home/settings.dart';
@@ -41,8 +45,50 @@ class _HomePageState extends State<HomePage> {
   void _showDialogs() async {
     await null; // initState must be completed before using context
     if (!mounted) return;
+    _showStorageAccessDialog();
     UpdateManager.showUpdateDialog(context);
     SentryConsentDialog.showIfNeeded(context);
+  }
+
+  void _showStorageAccessDialog() async {
+    if (!Platform.isAndroid) return;
+    if (stows.androidSafInitialized.value ||
+        stows.customDataDir.value != null) {
+      return;
+    }
+
+    if (!mounted) return;
+
+    final shouldProceed =
+        await showDialog<bool>(
+          context: context,
+          barrierDismissible: false,
+          builder: (context) => AlertDialog(
+            title: const Text('File Access'),
+            content: const Text(
+              'Local Saber stores all your notes as files on your device. '
+              'To access them through your file manager app (for backup, '
+              'sync, or viewing), the app needs permission to the notes folder. '
+              'This is a one-time permission request.',
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context, false),
+                child: const Text('Not Now'),
+              ),
+              FilledButton(
+                onPressed: () => Navigator.pop(context, true),
+                child: const Text('Allow'),
+              ),
+            ],
+          ),
+        ) ??
+        false;
+
+    if (!mounted) return;
+    if (shouldProceed) {
+      await FileManager.initializeStorageAccessIfNeeded();
+    }
   }
 
   void _setState() {

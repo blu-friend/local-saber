@@ -51,6 +51,12 @@ class Stows {
     volatile: !_isOnMainIsolate,
   );
 
+  final androidSafInitialized = PlainStow(
+    'androidSafInitialized',
+    false,
+    volatile: !_isOnMainIsolate,
+  );
+
   final allowInsecureConnections = SecureStow.bool(
     'allowInsecureConnections',
     false,

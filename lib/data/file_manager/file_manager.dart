@@ -6,6 +6,7 @@ import 'package:collection/collection.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart' show DateFormat;
 import 'package:local_saber/components/home/sort_button.dart';
@@ -26,7 +27,10 @@ class FileManager {
 
   static final log = Logger('FileManager');
 
-  static const appRootDirectoryPrefix = 'Local Saber';
+  static const appRootDirectoryPrefix = 'local-saber';
+
+  /// Platform channel for Android native operations
+  static const platform = MethodChannel('com.localsaber.app/storage');
 
   /// This isn't final because isolates sometimes init multiple times.
   /// Realistically, this value never changes.
@@ -78,8 +82,66 @@ class FileManager {
   static Future<String> getDocumentsDirectory() async =>
       stows.customDataDir.value ?? await getDefaultDocumentsDirectory();
 
-  static Future<String> getDefaultDocumentsDirectory() async =>
-      '${(await getApplicationDocumentsDirectory()).path}/$appRootDirectoryPrefix';
+  static Future<String> getDefaultDocumentsDirectory() async {
+    String baseDir;
+    if (Platform.isAndroid) {
+      // Use external storage so files are accessible via file app
+      final externalDir = await getExternalStorageDirectory();
+      baseDir =
+          externalDir?.path ?? (await getApplicationDocumentsDirectory()).path;
+    } else {
+      baseDir = (await getApplicationDocumentsDirectory()).path;
+    }
+    return '$baseDir/$appRootDirectoryPrefix';
+  }
+
+  /// Request Storage Access Framework (SAF) permission for a specific folder
+  /// Returns true if permission was granted, false otherwise
+  static Future<bool> requestStorageAccessFrameworkForFolder(
+    String folderPath,
+  ) async {
+    if (!Platform.isAndroid) return true;
+
+    try {
+      final result = await platform.invokeMethod<bool>('requestSAFForFolder', {
+        'folderPath': folderPath,
+      });
+      if (result ?? false) {
+        log.info('SAF access granted for: $folderPath');
+      }
+      return result ?? false;
+    } catch (e) {
+      log.warning('Error requesting SAF access for $folderPath: $e');
+      return false;
+    }
+  }
+
+  /// Initialize SAF access on first run for default folder
+  static Future<bool> initializeStorageAccessIfNeeded() async {
+    if (!Platform.isAndroid) return true;
+
+    // Skip if already initialized or custom directory is set
+    if (stows.androidSafInitialized.value ||
+        stows.customDataDir.value != null) {
+      return true;
+    }
+
+    try {
+      // Request SAF access for the default folder
+      final defaultDir = await getDefaultDocumentsDirectory();
+      final success = await requestStorageAccessFrameworkForFolder(defaultDir);
+
+      if (success) {
+        // Mark as initialized
+        stows.androidSafInitialized.value = true;
+        log.info('Android SAF initialized successfully');
+      }
+      return success;
+    } catch (e) {
+      log.warning('Error initializing SAF: $e');
+      return false;
+    }
+  }
 
   static Future<void> migrateDataDir() async {
     final oldDir = Directory(documentsDirectory);

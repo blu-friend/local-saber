@@ -8,9 +8,16 @@
 
 All your notes are stored as files on your device in a standard folder location:
 
-- **Linux**: `~/.local/share/Local Saber/` (or your custom folder)
-- **Windows**: `%APPDATA%\Local Saber\` (or your custom folder)
-- **macOS**: `~/Library/Application Support/Local Saber/` (or your custom folder)
+- **Linux**: `~/.local/share/local-saber/` (or your custom folder)
+- **Windows**: `%APPDATA%\local-saber\` (or your custom folder)
+- **macOS**: `~/Library/Application Support/local-saber/` (or your custom folder)
+- **Android**: External storage `/storage/emulated/0/local-saber/` (or your custom folder)
+
+On Android, you can also use the **Storage Access Framework (SAF)** to grant the app persistent access to any folder on your device. Simply:
+
+1. Tap "Choose Folder" in the settings to select your preferred location
+2. Select the `local-saber` folder (or create one)
+3. The app will request persistent access and remember your choice
 
 You can browse, backup, and manage your notes using your file manager just like any other files.
 
